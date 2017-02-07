@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Creating an HTML File</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="../../demo/styles.css">
+  <style>
+    body {
+      padding-bottom: 30px;
+    }
+    pre {
+      padding: 1em;
+      max-width: 720px;
+    }
+    code {
+      padding: 0px 5px;
+    }
+    pre, code {
+      color: #673AB7;
+      background-color: #EEEEEE;
+      border: 1px solid #BDBDBD;
+      border-radius: 2px;
+    }
+    ul, ol {
+      margin: 16px 0px;
+    }
+    ul > li, ol > li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Creating an HTML File</h1>
+  <ol>
+    <li>To create a file, right click on the desired directory in the left-hand view and click <em>"New File"</em>.  Name the file <code>index.html</code></li>
+    <li>
+      Every HTML begins with the same basic structure
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+      <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code> tells the browser this is an HTML file</li>
+        <li><code>&lt;html lang="en"&gt;&lt;/html&gt;</code> signals the start of the html</li>
+        <li><code>&lt;head&gt;&lt;/head&gt;</code> will contain information about the page (Title, and other needed files)</li>
+        <li><code>&lt;body&gt;&lt;/body&gt;</code> contains visual content for the page</li>
+      </ul>
+    </li>
+    <li>
+      HTML files will be completely composed of elements
+      <div><img src="http://www.computerhope.com/jargon/h/html-tag.gif" alt="HTML element"></div>
+      <div><img src="http://schoolsofweb.com/wp-content/uploads/empty-element.jpg" alt="img-element"></div>
+    </li>
+    <li>
+      Elements have one of three different default sizes based off of their <code>display</code> property.
+      <ul>
+        <li>inline (&lt;a&gt;&lt;/a&gt;, and &lt;span&gt;&lt;/span&gt;)</li>
+        <li>inline-block (&lt;img /&gt;)</li>
+        <li>block (&lt;main&gt;&lt;/main&gt;, &lt;ul&gt;&lt;/ul&gt;, &lt;li&gt;&lt;/li&gt;, and &lt;p&gt;&lt;/p&gt;)</li>
+      </ul>
+    </li>
+  </ol>
+</body>
+</html>
