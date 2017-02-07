@@ -9,8 +9,8 @@ nav {
 }
 
 nav > ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 nav > ul > li {
@@ -24,11 +24,11 @@ nav > ul > li > a {
 
 main {
   max-width: 720px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 p {
-  margin-bottom:
+  margin-bottom: 2px;
 }
 
 button {
@@ -43,4 +43,12 @@ button {
 strong {
   color: #009688;
   font-weight: 400;
+}
+
+.student-list {
+  font-weight: bold;
+  font-size: 18px;
+  color: #009688;
+  margin-bottom: 1.5em;
+
 }
