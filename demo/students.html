@@ -47,6 +47,7 @@
     <h3>Student List</h3>
     <ul id="student-list"></ul>
     <button onClick="promptAddStudent()">Add Student</button>
+    <button onClick="promptUpdateStudent()">Update Student</button>
     <button onClick="promptRemoveStudent()">Remove Student</button>
     <button onClick="removeLastStudent()">Remove Last Student</button>
   </main>
@@ -130,6 +131,13 @@
        var oldStudentName = prompt("Who would you like to remove?");
 
        removeStudent(oldStudentName);
+    }
+    function promptUpdateStudent() {
+        var oldStudentName = prompt("Who would you like to update?");
+
+        var newStudentName = prompt("What is the updated name?");
+
+        editStudent(oldStudentName, newStudentName);
     }
 
     // Take a few actions

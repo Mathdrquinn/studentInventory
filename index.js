@@ -78,3 +78,11 @@
 
         removeStudent(oldStudentName);
     }
+
+    function promptUpdateStudent() {
+        var oldStudentName = prompt("Who would you like to update?");
+
+        var newStudentName = prompt("What is the updated name?");
+
+        editStudent(oldStudentName, newStudentName);
+    }
