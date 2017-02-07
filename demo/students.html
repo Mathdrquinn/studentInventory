@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Inventory</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="https://github.com/Mathdrquinn/studentInventory">Code</a></li>
+        <li><a href="#">Student Inventory</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Student Inventory</h1>
+    <h2>Overview</h2>
+    <p>
+      The purpose of this assessment is to have you <strong>build a simple “CRUD” application</strong> that you will be asked to bring with you to the interview. At the interview, you will be asked to walk a small group of engineers through the work you did in this assessment. We are interested in seeing you demonstrate technical skills commensurate with your experience level and in understanding how you work through technical tasks.
+    </p>
+    <h2>Requirements</h2>
+    <p>
+      The CRUD application will be a simple <strong>Student Management System</strong> that has the following features:
+    </p>
+    <ol>
+      <li>The end user of the Student Management System should be able to</li>
+      <ul>
+        <li><strong>Launch the application</strong> and be presented with a list of students (no paging is necessary).</li>
+        <li><strong>Insert</strong> a new student</li>
+        <li><strong>Update</strong> an existing student selected from the list.</li>
+        <li><strong>Delete</strong> a student from the list after providing a confirmation dialog.</li>
+      </ul>
+    </ol>
+    <h2>Architecture</h2>
+    <p>
+      At <u><em>NextGear Capital</em></u>, we use <a href="https://www.java.com/en/">Java 1.8</a> to build our middle tier business logic, and <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>/<a href="https://angularjs.org/">AngularJS</a> to build our user interface as a Single Page Application. The middle tier communicates with a Microsoft SQL Server database, and is accessed by the user interface through a REST API.
+    </p>
+    <p>
+      For the purposes of this assessment, you may <strong>use the technology of your choice</strong>. We expect the technology used would be in line with that in which you are most proficient. However, you must demonstrate complete separation between the UI and the middle tier as described above.
+    </p>
+    <h2>The App</h2>
+    <hr>
+    <h3>Student List</h3>
+    <ul id="student-list"></ul>
+    <button onClick="promptAddStudent()">Add Student</button>
+    <button onClick="promptRemoveStudent()">Remove Student</button>
+    <button onClick="removeLastStudent()">Remove Last Student</button>
+  </main>
+  <script>
+    var studentList = [];
+
+
+    function addStudent(name) {
+       studentList.push(name);
+       addStudentToHTML(name);
+    }
+
+    function addManyStudents(listOfNames) {
+       for (i = 0; i < listOfNames.length; i++) {
+           var name = listOfNames[i];
+           addStudent(name);
+       }
+    }
+
+    function removeLastStudent() {
+       studentList.pop();
+
+       removeLastStudentFromHTML();
+    }
+
+    function getStudentIndex(name) {
+       return studentList.indexOf(name);
+    }
+
+    function removeStudent(name) {
+       var index = getStudentIndex(name);
+
+       studentList.splice(index, 1);
+       removeStudentFromHTML(name);
+    }
+
+    function editStudent(oldName, newName) {
+       var index = getStudentIndex(oldName);
+
+       studentList.splice(index, 1, newName);
+       editStudentFromHTML(oldName, newName);
+    }
+
+    function addStudentToHTML(name) {
+       var liElement = document.createElement("li");
+       liElement.setAttribute("id", name);
+       var ulElement = document.getElementById("student-list");
+       var text = document.createTextNode(name);
+
+       liElement.appendChild(text);
+       ulElement.appendChild(liElement);
+
+    }
+
+    function removeStudentFromHTML(name) {
+       var liElement = document.getElementById(name);
+
+       liElement.remove();
+    }
+
+    function removeLastStudentFromHTML() {
+       var ulElement = document.getElementById("student-list");
+       var lastLiElement = ulElement.lastChild;
+
+       lastLiElement.remove();
+    }
+
+    function editStudentFromHTML(oldName, newName) {
+       var liElement = document.getElementById(oldName);
+       liElement.textContent = newName;
+       liElement.setAttribute("id", newName);
+    }
+
+    function promptAddStudent() {
+       var newStudentName = prompt("Who would you like to add?");
+
+       addStudent(newStudentName);
+    }
+
+    function promptRemoveStudent() {
+       var oldStudentName = prompt("Who would you like to remove?");
+
+       removeStudent(oldStudentName);
+    }
+
+    // Take a few actions
+    addStudent('Brendan');
+    addStudent('Andrew');
+    addStudent('Shane');
+  </script>
+</body>
+</html>

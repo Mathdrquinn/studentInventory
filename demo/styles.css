@@ -1,0 +1,46 @@
+html {
+  font-size: calc(100% + 6px);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+nav {
+  border-bottom: 1px solid black;
+}
+
+nav > ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav > ul > li {
+  display: inline-block;
+  padding: 8px 15px 8px 15px;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+}
+
+main {
+  max-width: 720px;
+  margin: 0px auto;
+}
+
+p {
+  margin-bottom:
+}
+
+button {
+  background: transparent;
+  border: 1px solid blue;
+  border-radius: 3px;
+  color: blue;
+  cursor: pointer;
+  padding: 8px 15px 8px 15px;
+}
+
+strong {
+  color: #009688;
+  font-weight: 400;
+}
