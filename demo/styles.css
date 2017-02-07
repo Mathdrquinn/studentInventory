@@ -4,6 +4,10 @@ html {
   font-weight: 300;
 }
 
+body {
+  padding-bottom: 30px;
+}
+
 nav {
   border-bottom: 1px solid black;
 }
