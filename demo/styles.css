@@ -48,3 +48,12 @@ strong {
   color: #009688;
   font-weight: 400;
 }
+
+.next-gear-logo {
+  max-height: 40px;
+  max-width: 200px;
+}
+
+.sub-header {
+  opacity: 0.5;
+}
