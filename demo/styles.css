@@ -4,12 +4,13 @@ html {
   font-weight: 300;
 }
 
-body {
-  padding-bottom: 30px;
+header {
+  border-bottom: 1px solid black;
 }
 
-nav {
-  border-bottom: 1px solid black;
+footer {
+  border-top: 1px solid black;
+  padding: 8px 0px 8px 0px;
 }
 
 nav > ul {
@@ -20,6 +21,11 @@ nav > ul {
 nav > ul > li {
   display: inline-block;
   padding: 8px 15px 8px 15px;
+}
+
+nav > ul > li > img {
+  height: 25px;
+  vertical-align: bottom;
 }
 
 nav > ul > li > a {
@@ -47,13 +53,4 @@ button {
 strong {
   color: #009688;
   font-weight: 400;
-}
-
-.next-gear-logo {
-  max-height: 40px;
-  max-width: 200px;
-}
-
-.sub-header {
-  opacity: 0.5;
 }
