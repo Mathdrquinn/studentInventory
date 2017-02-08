@@ -4,13 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Creating an HTML File</title>
+  <title>Irate Tangerines</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <link rel="stylesheet" href="../../demo/styles.css">
   <style>
-    body {
-      padding-bottom: 30px;
-    }
     pre {
       padding: 1em;
       max-width: 720px;
@@ -29,6 +26,9 @@
     }
     ul > li, ol > li {
       margin-bottom: 8px;
+    }
+    img {
+       box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
     }
   </style>
 </head>
@@ -53,18 +53,40 @@
       </ul>
     </li>
     <li>
-      HTML files will be completely composed of elements
+      HTML files will be completely composed of <strong>elements</strong> which are built by <strong>tags</strong>, <strong>attributes</strong>, and <strong>content</strong>
       <div><img src="http://www.computerhope.com/jargon/h/html-tag.gif" alt="HTML element"></div>
       <div><img src="http://schoolsofweb.com/wp-content/uploads/empty-element.jpg" alt="img-element"></div>
     </li>
     <li>
-      Elements have one of three different default sizes based off of their <code>display</code> property.
+      Within the <code>&lt;head&gt;&lt;/head&gt;</code> element, there is always a <code>&lt;title&gt;&lt;/title&gt;</code> which gives the page its tab title.  This is done by adding content to the element: e.g. <code>&lt;title&gt;Irate Tangerines&lt;/title&gt;</code> yields <br /> <img src="../images/title.png" alt="Image of HTML title in browser" height="50px">
+    </li>
+    <li>
+      Elements have one of three different default sizes determined by the <strong>display</strong> property.
       <ul>
-        <li>inline (&lt;a&gt;&lt;/a&gt;, and &lt;span&gt;&lt;/span&gt;)</li>
-        <li>inline-block (&lt;img /&gt;)</li>
-        <li>block (&lt;main&gt;&lt;/main&gt;, &lt;ul&gt;&lt;/ul&gt;, &lt;li&gt;&lt;/li&gt;, and &lt;p&gt;&lt;/p&gt;)</li>
+        <li>
+          <strong>inline</strong>
+          <ul>
+            <li>the element is no bigger than the size of its contents</li>
+            <li>e.g <code>&lt;a&gt;&lt;/a&gt;</code>, and <code>&lt;strong&gt;&lt;/strong&gt;</code></li>
+          </ul>
+        </li>
+        <li>
+          <strong>inline-block</strong>
+          <ul>
+            <li>like <em>inline</em>, but it's size can be manipulated</li>
+            <li>e.g. <code>&lt;img /&gt;</code></li>
+          </ul>
+        </li>
+        <li>
+          <strong>block</strong>
+          <ul>
+            <li>the element grows to the size of its container</li>
+            <li>e.g. <code>&lt;main&gt;&lt;/main&gt;, &lt;ul&gt;&lt;/ul&gt;, &lt;li&gt;&lt;/li&gt;</code>, and <code>&lt;p&gt;&lt;/p&gt;</code></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ol>
+  <footer><a href="./02-Building-Home-Page-Collaborative.html">Next</a></footer>
 </body>
 </html>
