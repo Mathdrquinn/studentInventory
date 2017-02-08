@@ -4,6 +4,21 @@
 		<title>Basic Javascript Principles</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 		<link rel="stylesheet" href="../../demo/styles.css">
+		<style>
+			pre {
+	      padding: 1em;
+	      max-width: 720px;
+	    }
+	    code {
+	      padding: 0px 5px;
+	    }
+	    pre, code {
+	      color: #673AB7;
+	      background-color: #EEEEEE;
+	      border: 1px solid #BDBDBD;
+	      border-radius: 2px;
+	    }
+		</style>
 	</head>
 	<body>
 		<header>
@@ -30,11 +45,11 @@
 				<p>
 					Variables are declared with the var keyword as follows:
 				</p>
+				<pre>
+var foo = 3;
+				</pre>
 				<p>
-					var foo = 3;
-				</p>
-				<p>
-					Now, if you were to call the variable you created called foo, <br> 3 would be returned.
+					Now, if you were to call the variable you created called <code>foo</code>, <br> <code>3</code> would be returned.
 				</p>
 			<h2>Functions</h2>
 				<p>
@@ -43,11 +58,11 @@
 				<p>
 					To use a function, you must define it somewhere in the scope from which you wish to call it.
 				</p>
+				<pre>
+function multiply(a, b) {<br> return a * b; <br>}
+				</pre>
 				<p>
-					function multiply(a, b) {<br> return a * b; <br>}
-				</p>
-				<p>
-					Now, if you were to call multiply(5, 10) <br> It would return 50.
+					Now, if you were to call <code>multiply(5, 10)</code> <br> It would return <code>50</code>.
 				</p>
 			<h2>Passing Data Into Functions</h2>
 				<p>
@@ -56,17 +71,17 @@
 				<p>
 					So, let's combine variables with functions like this:
 				</p>
-				<p>
-					var this = 3; <br>
-					var that = 6; <br>
-				</p>
+				<pre>
+var thing1 = 3;
+var thing2 = 6;
+				</pre>
 				<p>
 					Now, let's call multiply that we created above and pass in our variables this and that:
 				</p>
-				<p>
-					multiply(this, that) <br>
-					This will return 18.
-				</p>
+				<pre>
+multiply(thing1, thing2);
+// This will return 18.
+				</pre>
 		</main>
 		<footer>Copyright 2017, by
 			<a href="https://www.nextgearcapital.com/">NextGearCapital</a>
