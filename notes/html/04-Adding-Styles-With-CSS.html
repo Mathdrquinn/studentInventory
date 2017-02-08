@@ -33,50 +33,52 @@
   </style>
 </head>
 <body>
-  <h1>Adding Styles to HTML with CSS</h1>
-  <h2>Define</h2>
-  <p>
-    <strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong>.
-    <br / >
-    Broken down, it means a <strong>files that contain styles</strong> or fonts.  Those styles are given <strong>priority based on top-down positioning</strong> (cascading).
-  </p>
-  <p>
-    These files can be named anything as long as they end with <code>.css</code> much like HTML files all end in <code>.html</code>.
-  </p>
-  <h2>Structure</h2>
-  <p>
-    There are many ways to apply styles via css.  <strong>The focus of this lesson is to style by tag name via a CSS file loaded into the <code>&lt;head&gt;</code> element.</strong> For example, the following CSS will change the text size and background-color of all <code>&lt;p&gt;</code> tags.
-    <pre>
-p {
-  font-size: 30px;
-  background-color: red;
-}
-
-u {
-  color: white;
-}
-    </pre>
-    And would yield:
-    <p style="font-size: 30px; background-color: red;">A <u style="color: white;">styled</u> paragraph</p>
+  <main>
+    <h1>Adding Styles to HTML with CSS</h1>
+    <h2>Define</h2>
     <p>
-      <em>Note:</em> The <code>&lt;u&gt;</code> tag surrounding <em>"styled"</em> maintains a browser defined style with the underline.
+      <strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong>.
+      <br / >
+      Broken down, it means a <strong>files that contain styles</strong> or fonts.  Those styles are given <strong>priority based on top-down positioning</strong> (cascading).
     </p>
-  </p>
-  <h2>Loading the Style Sheet</h2>
-  <p>Earlier it was said that the <code>&lt;head&gt;</code> contains information about the page.   This information typically includes what styles to apply.</p>
-  <p><img src="../images/files.png" alt="image of file tree" height="100px"></p>
-  <p>
-    Given the file structure above, the <code>styles.css</code> file would be loaded like so:
-    <br />
-    <img src="../images/loadingStyles.png" alt="How to load a stylesheet" height="125px">
-  </p>
-  <h2>Inspection</h2>
-  <p>
-    Like before the <strong>Dev Tools</strong> can be helpful in understanding what styles are being applied and to which elements.
-  </p>
-  <p><img src="../images/devToolsStyles.png" alt="Using Dev Tools to inspect element styles" style="max-width: 80%;"></p>
-  <h2>Collaboration</h2>
-  <p>Add styles to the <strong>Home</strong> page and <strong>Directions</strong> page created earlier.</p>
+    <p>
+      These files can be named anything as long as they end with <code>.css</code> much like HTML files all end in <code>.html</code>.
+    </p>
+    <h2>Structure</h2>
+    <p>
+      There are many ways to apply styles via css.  <strong>The focus of this lesson is to style by tag name via a CSS file loaded into the <code>&lt;head&gt;</code> element.</strong> For example, the following CSS will change the text size and background-color of all <code>&lt;p&gt;</code> tags.
+      <pre>
+  p {
+    font-size: 50px;
+    background-color: red;
+  }
+
+  u {
+    color: white;
+  }
+      </pre>
+      And would yield:
+      <p style="font-size: 50px; background-color: red;">A <u style="color: white;">styled</u> paragraph</p>
+      <p>
+        <em>Note:</em> The <code>&lt;u&gt;</code> tag surrounding <em>"styled"</em> maintains a browser defined style with the underline.
+      </p>
+    </p>
+    <h2>Loading the Style Sheet</h2>
+    <p>Earlier it was said that the <code>&lt;head&gt;</code> contains information about the page.   This information typically includes what styles to apply.</p>
+    <p><img src="../images/files.png" alt="image of file tree" height="100px"></p>
+    <p>
+      Given the file structure above, the <code>styles.css</code> file would be loaded like so:
+      <br />
+      <img src="../images/loadingStyles.png" alt="How to load a stylesheet" height="125px">
+    </p>
+    <h2>Inspection</h2>
+    <p>
+      Like before, the <strong>Dev Tools</strong> can be helpful in understanding what styles are being applied and to which elements.
+    </p>
+    <p><img src="../images/devToolsStyles.png" alt="Using Dev Tools to inspect element styles" style="max-width: 80%;"></p>
+    <h2>Collaboration</h2>
+    <p>Add styles to the <strong>Home</strong> page and <strong>Directions</strong> page created earlier.</p>
+  </main>
   <footer>
     <a href="./03-Activity-Solo-Build.html">Previous</a>
   </footer>
